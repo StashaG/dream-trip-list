@@ -4,7 +4,6 @@ const TableHeader = () => {
     return (
       <thead>
         <tr>
-            <th scope="col">#</th>
             <th scope="col">Name</th>
             <th scope="col">Dream Trip Destination</th>
         </tr>
@@ -12,34 +11,27 @@ const TableHeader = () => {
     )
   }
   
-  const TableBody = () => {
-    return (
-      <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Stacey</td>
-            <td>Kenya</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Summer</td>
-            <td>London</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td colspan="1">Jasmine</td>
-            <td>Thailand</td>
-        </tr>
-        </tbody>
-          )
-      }
+  const TableBody = (props) => {
+      const rows = props.characterData.map((row, index) => {
+        return (
+            <tr key={index}>
+                <td>{row.name}</td>
+                <td>{row.trip}</td>
+            </tr>    
+        )
+      })
+      
+    return <tbody>{rows}</tbody>
+}
   
   class Table extends Component {
       render() {
+          const {characterData} = this.props
+
           return (
           <table class="table table-hover">
               <TableHeader />
-              <TableBody />
+              <TableBody characterData={characterData}/>
           </table>
           )
       }
