@@ -5,10 +5,9 @@ This app was created to review the fundamentals of React. The one thing I miss r
 ## Goal:
 To review function and class components, state, props, and submitting form data. My plan is to continue to add additional features to this app.
 
-## 🖥️ Screenshot:
-#### :point_down: 
+## 🖥️ Screenshot: :point_down:
+ 
 ![image](https://user-images.githubusercontent.com/35972972/101305457-c1fabf80-3810-11eb-8629-124bea01cbba.png)
-
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
