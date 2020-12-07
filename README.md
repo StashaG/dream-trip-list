@@ -1,6 +1,8 @@
 # Dream Trip List 
 
-This app was created to review the fundamentals of React. The one thing I miss right now is being able to travel, so I decided to create an app that would allow my family and friends to create a list of their dream trip destinations. These are destinations they would like to go after the pandemic. Who's ready for the pandemic to be over?...I am :raised_hand:. 
+This app was created to review the fundamentals of React. The one thing I miss right now is being able to travel, so I decided to create an app that would allow my family and friends to create a list of their dream trip destinations. These are destinations they would like to go after the pandemic.
+
+Who's ready for the pandemic to be over?...I am :raised_hand:
 
 ## Goal:
 To review function and class components, state, props, and submitting form data. My plan is to continue to add additional features to this app.
