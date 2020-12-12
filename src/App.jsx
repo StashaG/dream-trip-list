@@ -1,23 +1,10 @@
 
 import React, { Component}  from 'react';
-import Table from './Table';
+import Table from './component/Table';
 
 class App extends Component {
     state = {
-      characters: [
-        {
-          name: "Stacey",
-          trip: "Kenya"
-        },
-        {
-          name: "Summer",
-          trip: "London"
-        },
-        {
-          name: "Jasmine",
-          trip: "Thailand"
-        },
-      ],
+      characters: [],
     };
 
   removeCharacter = (index) => {
