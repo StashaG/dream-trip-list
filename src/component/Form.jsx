@@ -1,43 +1,56 @@
-import React, {Component} from 'react'
+import React, {Component} from 'react';
 
-class From extends Component {
-    initialState = {
-        name: '',
-        job: '',
-    }
+class Form extends Component {
+    constructor(props) {
+        super(props);
 
-    state = this.initialState
+        this.initialState = {
+            name: '',
+            trip: ''
+        };
+        this.state = this.initialState;
 }
 
 handleChange = (event) => {
-    const {name, value} = event.target
+    const { name, value } = event.target;
 
     this.setState({
-       [name]: value, 
-    })
+       [name]: value
+    });
+}
+
+onFormSubmit = (event) => {
+    event.preventDefault();
+
+    this.props.handleSubmit(this.state);
+    this.setState(this.initialState);
 }
 
 render() {
-    const { name, job } = this.state;
+    const { name, trip } = this.state;
 
-    return (
-        <form>
-            <label htmlFor="name">Name</label>
-            <input
-                type="text"
-                name="name"
-                id="name"
-                value={name}
-                onChange={this.handleChange} />
-            <label htmlFor="job">Job</label>
-            <input 
-                type="text"
-                name="job"
-                id="job"
-                value={job}
-                onChange={this.handleChange} />
-        </form>
-    )
+        return (
+            <form onSubmit={this.onFormSubmit}>
+                <label htmlFor="name">Name</label>
+                <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    value={name}
+                    onChange={this.handleChange} />
+                <label htmlFor="job">Trip</label>
+                <input 
+                    type="text"
+                    name="trip"
+                    id="trip"
+                    value={trip}
+                    onChange={this.handleChange} />
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        );
+    }
 }
 
 export default Form;
